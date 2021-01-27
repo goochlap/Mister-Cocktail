@@ -1,5 +1,5 @@
 class CocktailsController < ApplicationController
-  before_action :find_cocktail, only: :show
+  before_action :find_cocktail, only: %i[show destroy]
 
   def index
     @cocktails = Cocktail.all
@@ -20,6 +20,12 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
+  end
+
+  def destroy
+    @cocktail.destroy
+
+    redirect_to root_path, notice: 'Cocktail was successfully Delete'
   end
 
   private

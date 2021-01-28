@@ -1,9 +1,13 @@
 <h1><%= @cocktail.name %></h1>
+<%= cl_image_tag( @cocktail.photo.key,
+      width: 400, height: 300, crop: :fill)%>
 
 <p><% @cocktail.doses.each do |dose| %>
-    <%= dose.ingredient.name %>
-    <%= dose.description %> | 
-    <%= link_to 'delete dose', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?'} %>
+    Description: <%= dose.description %>
+    <br> 
+    Ingredients: <br>
+    - <%= dose.ingredient.name %>
+    <%= link_to 'delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?'} %>
     <br>
     <% end %>
 <br>

@@ -15,7 +15,6 @@ list = JSON.parse(list_serialized)
 
 hash_list = list['drinks']
 
-test = hash_list.each do |hash|
+hash_list.each do |hash|
   Ingredient.create(name: hash['strIngredient1'])
 end
-

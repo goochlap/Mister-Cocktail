@@ -1,9 +1,17 @@
-<h2>Create your Cocktail</h2>
+<div class="container-form">
 
-<%= simple_form_for(@cocktail) do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.input :photo, as: :file %>
-    <br>
-    <%= f.submit %>
-<% end %>
+<a href="<%= root_path %>" class= "root-link" >HOME PAGE</a>
+
+  <div class="form-create-cocktail">
+        <h2>Create your Cocktail</h2>
+
+        <%= simple_form_for(@cocktail) do |f| %>
+            <%= f.label :name, :label => "Name : " %>
+            <%= f.text_field :name %>
+            <%= f.input :photo, as: :file, :label => "Photo :" %>
+            <br>
+            <%= f.submit %>
+        <% end %>
+
+  </div>
+</div>

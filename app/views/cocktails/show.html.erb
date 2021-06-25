@@ -1,20 +1,25 @@
-<h1><%= @cocktail.name %></h1>
+<div class="container-show">
 
-<%= cl_image_tag( @cocktail.photo.key,
-      width: 400, height: 300, crop: :fill)%>
-      
-<p><% @cocktail.doses.each do |dose| %>
-    Description: <%= dose.description %>
-    <br> 
-    Ingredients: <br>
-    - <%= dose.ingredient.name %>
-    <%= link_to 'delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?'} %>
-    <br>
-    <% end %>
-<br>
-<%= link_to 'Edit Cocktail', new_cocktail_dose_path(@cocktail) %>
-<br>
-<%= link_to 'Delete Cocktail', cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?'} %>
-<br>
-<br>
-<%=  link_to 'Back', root_path %> 
+  <h1><%= @cocktail.name %></h1>
+
+  <%= cl_image_tag( @cocktail.photo.key,
+        width: 400, height: 300, crop: :fill)%>
+        
+  <p><% @cocktail.doses.each do |dose| %>
+      Description: <%= dose.description %>
+      <br> 
+      Ingredients: <br>
+      - <%= dose.ingredient.name %>
+      <%= link_to 'delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?'} %>
+      <br>
+      <% end %>
+  <br>
+  <%= link_to 'Edit Cocktail', new_cocktail_dose_path(@cocktail) %>
+  <br>
+  <%= link_to 'Delete Cocktail', cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?'} %>
+  <br>
+  <br>
+  <%=  link_to 'Back', root_path %>
+  
+</div>
+

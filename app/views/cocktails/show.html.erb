@@ -3,7 +3,7 @@
 <a href="<%= root_path %>" class= "root-link" >HOME PAGE</a>
 
   <div class="card-cocktail">
-    <h1><%= @cocktail.name %></h1>
+    <h1><%= @cocktail.name.capitalize %></h1>
     <%= cl_image_tag( @cocktail.photo.key, width: 400, height: 300, crop: :fill)%>
   </div>
 

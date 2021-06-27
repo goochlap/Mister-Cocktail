@@ -9,7 +9,7 @@ body {
   height: 100vh;
   width: 100%;
   padding: 0;
-  background-color: $light-green;
+  background-color: #E0F5E9;
 }
 
 .banner {
@@ -32,4 +32,7 @@ a {
 a:hover {
   text-decoration: none;
   color: #91C788;
+}
+span a {
+  color: black;
 }

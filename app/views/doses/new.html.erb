@@ -1,8 +1,16 @@
-<%= simple_form_for [ @cocktail, @dose ] do |f| %>
-  <h3><%= @cocktail.name %></h3>
-  <br>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.submit "Submit Description", class: "btn btn-primary" %>
-<% end %>
+  <div class="container-doses row">
+    <a href="<%= root_path %>" class= "home-page" >HOME PAGE</a>
 
+    <div class="form-doses col-8 col-sm-2 offset-sm-1">
+    
+      <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+        <h3><%= @cocktail.name.capitalize %></h3>
+        <br>
+        <%= f.input :description, label: 'Dose :' %>
+        <%= f.association :ingredient %>
+        <%= f.submit "Add ingredient", class: "btn btn-primary" %>
+      <% end %>
+
+    </div>
+
+  </div>

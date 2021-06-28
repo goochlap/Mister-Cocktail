@@ -1,0 +1,22 @@
+.container-doses {
+  min-height: 100vh;
+  color: black;
+  background-size: cover;
+  background-image: url(asset_path('bg-edit.jpg'));
+}
+
+.home-page {
+  right: 12px;
+  position: absolute;
+  color: #E6C22A;
+  top: 0;
+  font-size: 36px;
+}
+.form-doses {
+  margin-top: 100px;
+  color: white;
+  font-size: 20px;
+  h3 {
+    font-size: 48px;
+  }
+}
